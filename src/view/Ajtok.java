@@ -30,6 +30,17 @@ public class Ajtok extends javax.swing.JFrame {
         ajto3 = new javax.swing.JLabel();
         ajto1 = new javax.swing.JLabel();
         felfedesBtn = new javax.swing.JButton();
+        header = new javax.swing.JLabel();
+        statisztika = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        cseresJatek = new javax.swing.JLabel();
+        nemcseresJatek = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        cseresJatekNyert = new javax.swing.JLabel();
+        nemCseresJatekNyert = new javax.swing.JLabel();
+        ujraBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -42,34 +53,119 @@ public class Ajtok extends javax.swing.JFrame {
 
         felfedesBtn.setText("Felfedés");
 
+        header.setFont(new java.awt.Font("Sitka Subheading", 1, 36)); // NOI18N
+        header.setText("Három ajtó");
+
+        statisztika.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Statisztika"));
+
+        jLabel2.setText("Cserés játék");
+
+        jLabel3.setText("Nem cserés");
+
+        cseresJatek.setText("0");
+
+        nemcseresJatek.setText("0");
+
+        jLabel6.setText("Nyert");
+
+        jLabel7.setText("Nyert");
+
+        cseresJatekNyert.setText("0");
+
+        nemCseresJatekNyert.setText("0");
+
+        javax.swing.GroupLayout statisztikaLayout = new javax.swing.GroupLayout(statisztika);
+        statisztika.setLayout(statisztikaLayout);
+        statisztikaLayout.setHorizontalGroup(
+            statisztikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(statisztikaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(statisztikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(statisztikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(statisztikaLayout.createSequentialGroup()
+                        .addComponent(cseresJatek)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(cseresJatekNyert)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(statisztikaLayout.createSequentialGroup()
+                        .addComponent(nemcseresJatek)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel7)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(nemCseresJatekNyert)
+                        .addGap(0, 0, Short.MAX_VALUE))))
+        );
+        statisztikaLayout.setVerticalGroup(
+            statisztikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(statisztikaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(statisztikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(cseresJatek)
+                    .addComponent(jLabel6)
+                    .addComponent(cseresJatekNyert))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(statisztikaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(nemcseresJatek)
+                    .addComponent(jLabel7)
+                    .addComponent(nemCseresJatekNyert))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        ujraBtn.setText("Újra");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(53, 53, 53)
-                .addComponent(ajto1)
-                .addGap(120, 120, 120)
-                .addComponent(ajto2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 119, Short.MAX_VALUE)
-                .addComponent(ajto3)
-                .addGap(53, 53, 53))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(354, 354, 354)
-                .addComponent(felfedesBtn)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(36, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(ajto1)
+                            .addGap(120, 120, 120)
+                            .addComponent(ajto2)
+                            .addGap(119, 119, 119))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                            .addGap(18, 18, 18)
+                            .addComponent(header)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(felfedesBtn)
+                        .addGap(150, 150, 150)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(statisztika, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ajto3)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(ujraBtn)
+                        .addGap(40, 40, 40))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(66, 66, 66)
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(statisztika, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(9, 9, 9)
+                        .addComponent(header)))
+                .addGap(18, 18, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(ajto1)
                     .addComponent(ajto3)
                     .addComponent(ajto2))
-                .addGap(18, 18, 18)
-                .addComponent(felfedesBtn)
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(felfedesBtn)
+                    .addComponent(ujraBtn))
+                .addGap(24, 24, 24))
         );
 
         pack();
@@ -114,6 +210,17 @@ public class Ajtok extends javax.swing.JFrame {
     private javax.swing.JLabel ajto1;
     private javax.swing.JLabel ajto2;
     private javax.swing.JLabel ajto3;
+    private javax.swing.JLabel cseresJatek;
+    private javax.swing.JLabel cseresJatekNyert;
     private javax.swing.JButton felfedesBtn;
+    private javax.swing.JLabel header;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel nemCseresJatekNyert;
+    private javax.swing.JLabel nemcseresJatek;
+    private javax.swing.JPanel statisztika;
+    private javax.swing.JButton ujraBtn;
     // End of variables declaration//GEN-END:variables
 }
